@@ -1,16 +1,5 @@
 const profile = {
   pageTitle: "Xiaoxuan He | Homepage",
-  name: "Xiaoxuan He",
-  title: "Ph.D. in Computer Science",
-  affiliation: "College of Computer Science and Technology, Zhejiang University, advised by Prof. Bohan Zhuang.",
-  location: "Hangzhou, China",
-  email: "xiaoxuanhe@example.com",
-  scholarUrl: "#",
-  links: [
-    { label: "Google Scholar", url: "#" },
-    { label: "GitHub", url: "#" },
-    { label: "CV", url: "#" }
-  ],
   biography: [
     "I am currently a Ph.D. candidate focusing on generative models, multimodal learning, and efficient post-training for vision systems. My recent interests include image and video generation, reinforcement learning for generative models, and controllable multimodal reasoning.",
     "This homepage follows the classic academic style of Jie Yang's website: concise top information, a biography section, a running news list, and a publication-centered layout.",
