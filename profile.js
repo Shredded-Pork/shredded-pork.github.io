@@ -1,10 +1,10 @@
 const profile = {
   pageTitle: "Xiaoxuan He | Homepage",
   name: "Xiaoxuan He",
-  title: "Ph.D. Candidate in AI",
-  affiliation: "Your University / Lab Name",
-  location: "Shanghai, China",
-  email: "your.email@example.com",
+  title: "Ph.D. in Computer Science",
+  affiliation: "College of Computer Science and Technology, Zhejiang University, advised by Prof. Bohan Zhuang.",
+  location: "Hangzhou, China",
+  email: "xiaoxuanhe@example.com",
   scholarUrl: "#",
   links: [
     { label: "Google Scholar", url: "#" },
