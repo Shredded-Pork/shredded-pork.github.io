@@ -6,13 +6,12 @@ const profile = {
   affiliation: "Your University / Lab Name",
   location: "Shanghai, China",
   email: "your.email@example.com",
-  photo: "",
   summary:
-    "I work on generative modeling, multimodal learning, and post-training methods for vision and video systems.",
+    "Ph.D. candidate interested in generative models, multimodal learning, and modern AI systems.",
   highlights: [
-    "Open to research collaborations, internships, and academic exchange.",
-    "Interested in diffusion models, reinforcement learning, and multimodal reasoning.",
-    "This homepage is driven by a single editable data file: profile.js."
+    "Research interests include diffusion models, video generation, and multimodal reasoning.",
+    "Open to academic collaboration and research exchange.",
+    "This homepage can be updated by editing profile.js."
   ],
   heroLinks: [
     { label: "Email", url: "mailto:your.email@example.com" },
@@ -148,29 +147,6 @@ function renderLinks(links) {
     .join("");
 }
 
-function renderPortrait() {
-  const portrait = document.getElementById("portrait");
-  if (!portrait) {
-    return;
-  }
-
-  if (profile.photo && profile.photo.trim()) {
-    portrait.innerHTML = `<img class="portrait-image" src="${escapeHtml(
-      profile.photo
-    )}" alt="${escapeHtml(profile.name)}" />`;
-    return;
-  }
-
-  const initials = profile.name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((word) => word[0].toUpperCase())
-    .join("");
-
-  portrait.innerHTML = `<div class="portrait-initials">${escapeHtml(initials)}</div>`;
-}
-
 function renderTextList(containerId, items, renderer) {
   const container = document.getElementById(containerId);
   if (!container) {
@@ -191,8 +167,6 @@ document.getElementById("hero-links").innerHTML = renderLinks(profile.heroLinks)
 document.getElementById("contact-links").innerHTML = renderLinks(profile.heroLinks);
 document.getElementById("contact-note").textContent = profile.contactNote;
 document.getElementById("footer-text").textContent = profile.footer;
-
-renderPortrait();
 
 renderTextList(
   "highlights",
