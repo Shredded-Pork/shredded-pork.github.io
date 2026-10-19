@@ -2,13 +2,37 @@
   "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<link rel="shortcut icon" href="./pic/zju.png">
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-	<meta name="keywords" content="Xiaoxuan He">
-	<meta name="description" content="Xiaoxuan He's home page">
-	<meta name="google-site-verification" content="xg04VgCH_1GseFDVDJUDOU2fWPkMU61koxePfxI9L2U" />
-	<link rel="stylesheet" href="jemdoc.css" type="text/css">
-	<title>Xiaoxuan He&#39;s Homepage</title>
+  <link rel="shortcut icon" href="./pic/zju.png">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="keywords" content="Xiaoxuan He">
+  <meta name="description" content="Xiaoxuan He's home page">
+  <meta name="google-site-verification"
+        content="xg04VgCH_1GseFDVDJUDOU2fWPkMU61koxePfxI9L2U" />
+  <link rel="stylesheet" href="jemdoc.css" type="text/css">
+
+  <style type="text/css">
+    .photo-stack {
+      position: relative;
+      width: 300px;
+      height: 360px;
+      margin-left: 30px;
+    }
+
+    .photo-stack img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.4s, opacity 0.4s;
+    }
+  </style>
+
+  <title>Xiaoxuan He's Homepage</title>
 </head>
 <body>
 	<!-- <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
@@ -46,40 +70,12 @@
 				</p>
 			</td>
 			<td>
-		  <div style="
-		    display: grid;
-		    grid-template-columns: repeat(2, 160px);
-		    gap: 10px;
-		    margin-left: 30px;
-		  ">
-		    <img src="./pic/profile.jpg" alt="" style="
-		      width: 160px;
-		      height: 160px;
-		      object-fit: cover;
-		      border-radius: 8px;
-		    ">
-		
-		    <img src="./pic/profile1.jpg" alt="" style="
-		      width: 160px;
-		      height: 160px;
-		      object-fit: cover;
-		      border-radius: 8px;
-		    ">
-		
-		    <img src="./pic/profile2.jpg" alt="" style="
-		      width: 160px;
-		      height: 160px;
-		      object-fit: cover;
-		      border-radius: 8px;
-		    ">
-		
-		    <img src="./pic/profile3.jpg" alt="" style="
-		      width: 160px;
-		      height: 160px;
-		      object-fit: cover;
-		      border-radius: 8px;
-		    ">
-		  </div>
+			  <div class="photo-stack" id="photoStack">
+			    <img src="./pic/profile.jpg" alt="./pic/profile.jpg" />
+			    <img src="./pic/profile1.jpg" alt="./pic/profile1.jpg" />
+			    <img src="./pic/profile2.jpg" alt="./pic/profile2.jpg" />
+			    <img src="./pic/profile3.jpg" alt="./pic/profile3.jpg" />
+			  </div>
 			</td>
 		</tr><tr>
 	</tr></tbody>
