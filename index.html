@@ -34,6 +34,42 @@
 
   <title>Xiaoxuan He's Homepage</title>
 </head>
+<script type="text/javascript">
+  var stack = document.querySelectorAll("#photoStack img");
+  var first = 0;
+
+  function updateStack() {
+    for (var i = 0; i < stack.length; i++) {
+      var position = (i - first + stack.length) % stack.length;
+
+      stack[i].style.zIndex = stack.length - position;
+
+      if (position === 0) {
+        stack[i].style.transform = "translate(0, 0) scale(1)";
+        stack[i].style.opacity = "1";
+      } else {
+        stack[i].style.transform =
+          "translate(" + (position * 12) + "px, " +
+          (position * 12) + "px) scale(" +
+          (1 - position * 0.04) + ")";
+        stack[i].style.opacity = "0.85";
+      }
+    }
+  }
+
+  for (var i = 0; i < stack.length; i++) {
+    (function (index) {
+      stack[index].onclick = function () {
+        if (index === first) {
+          first = (first + 1) % stack.length;
+          updateStack();
+        }
+      };
+    })(i);
+  }
+
+  updateStack();
+</script>
 <body>
 	<!-- <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
 		<div id="layout-menu">
